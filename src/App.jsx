@@ -2,6 +2,7 @@ import { Component } from "react";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './index.css'
+
 class NameForm extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +15,6 @@ class NameForm extends Component {
     this.setState({value: event.target.value});
     let r,g,b = 0   
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(event.target.value);
-    if (event.target.value.length==7){
       if (result){ 
         r=parseInt(result[1], 16)
         g=parseInt(result[2], 16)
@@ -24,7 +24,6 @@ class NameForm extends Component {
         result=null;
         this.strRGB='ошибка'
       }
-    }
      
   }
  
